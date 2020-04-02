@@ -7,6 +7,8 @@ public class KeyOpener : MonoBehaviour
     public Inventory inventory;
     public bool inRange = false;
     public GameObject key;
+    private GameObject item;
+    public GameObject item_model;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +21,14 @@ public class KeyOpener : MonoBehaviour
     {
         Debug.Log("KeyOpener script registered event");
         //check if the correct item is in use
-        if((e.item as MonoBehaviour).gameObject == key)
+        item = (e.item as MonoBehaviour).gameObject; 
+        //Debug.Log(item);
+        if(item == key)
         {
             //check if in range
             if(inRange)
             {
-                gameObject.GetComponent<Potion>().AddIngredient();
+                gameObject.GetComponent<Potion>().AddIngredient(item_model);
             }
         }
     }
