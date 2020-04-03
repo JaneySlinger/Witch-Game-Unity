@@ -9,7 +9,6 @@ public class Slot : MonoBehaviour
 
     public void OnItemClicked()
     {
-        Debug.Log("Slot");
         if(item != null)
         {
             Debug.Log("Using:" + item.itemName);

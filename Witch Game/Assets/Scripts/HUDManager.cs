@@ -6,11 +6,15 @@ using UnityEngine.UI;
 public class HUDManager : MonoBehaviour
 {
     public Inventory inventory;
+    
     // Start is called before the first frame update
     void Start()
     {
         //when started register with the event handler of the inventory
         inventory.ItemAdded += InventoryItemAdded;
+
+        //register to the item removed event so that the item can be removed from the inventory
+        inventory.ItemUsed += InventoryItemUsed;
     }
 
     // Update is called once per frame
@@ -37,4 +41,27 @@ public class HUDManager : MonoBehaviour
             }
         }
     }
+
+    private void InventoryItemUsed(object sender, InventoryEventArgs e)
+    {
+        Transform panel = transform.Find("InventoryHUD");
+        Debug.Log("HUDManager: Removing the picture from the slot.");
+
+        //find the slot with the removed item and disable the image
+        foreach(Transform slot in panel){
+            Image image = slot.GetComponent<Image>();
+            Slot button = slot.GetComponent<Slot>();
+            if(image.sprite == e.item.itemImage){
+                //clear the slot in the panel
+                image.enabled = false;
+                image.sprite = null;
+                button.item = null;
+                break;
+            }
+        }
+ 
+    }
+
+
+    
 }

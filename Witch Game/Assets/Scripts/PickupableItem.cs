@@ -28,7 +28,7 @@ public class PickupableItem : MonoBehaviour, IInventoryItem
 
     public void onPickup()
     {
-        gameObject.SetActive(false); // "picking up merely makes it invisible"
+        gameObject.SetActive(false); // "picking up merely makes it invisible"        
     }
 
 }
