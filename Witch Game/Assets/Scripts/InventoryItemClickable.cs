@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InventoryItemClickable : MonoBehaviour
 {
+    public GameObject cauldron;
 
     public IInventoryItem item;
     public Inventory inventory;
@@ -11,6 +12,7 @@ public class InventoryItemClickable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
 
     }
 
@@ -24,8 +26,11 @@ public class InventoryItemClickable : MonoBehaviour
     {
         if(item!= null)
         {
-            Debug.Log("Using: " + item.itemName);
-            inventory.useItem(item);
+            //check if the item is in range to be used
+            if(cauldron.GetComponent<KeyOpener>().inRange){
+                Debug.Log("Using: " + item.itemName);
+                inventory.useItem(item);
+            }
         }
     }
 }

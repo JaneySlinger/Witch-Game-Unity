@@ -11,6 +11,7 @@ ModelImporter:
     100010: Table
     100012: Walls
     100014: //RootNode
+    100016: Cone
     400000: Chair
     400002: Chair.001
     400004: Chair.002
@@ -19,10 +20,12 @@ ModelImporter:
     400010: Table
     400012: Walls
     400014: //RootNode
+    400016: Cone
     2100000: Walls
     2100002: Walls.001
     2100004: Door
     2100006: No Name
+    2100008: Material
     2300000: Chair
     2300002: Chair.001
     2300004: Chair.002
@@ -30,6 +33,7 @@ ModelImporter:
     2300008: Door
     2300010: Table
     2300012: Walls
+    2300014: Cone
     3300000: Chair
     3300002: Chair.001
     3300004: Chair.002
@@ -37,6 +41,7 @@ ModelImporter:
     3300008: Door
     3300010: Table
     3300012: Walls
+    3300014: Cone
     4300000: Walls
     4300002: Door
     4300004: Table
@@ -44,6 +49,7 @@ ModelImporter:
     4300008: Chair.001
     4300010: Chair.002
     4300012: Chair.003
+    4300014: Cone
     7400000: Door|DoorAction
     9500000: //RootNode
     2186277476908879412: ImportLogs
