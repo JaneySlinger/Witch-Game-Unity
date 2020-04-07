@@ -25,14 +25,10 @@ public class KeyOpener : MonoBehaviour
         Debug.Log("KeyOpener script registered event");
         //check if the correct item is in use
         item = (e.item as MonoBehaviour).gameObject; 
-        //Debug.Log(item);
         if(item == key)
-        {
-            //check if in range
-            if(inRange)
-            {
-                gameObject.GetComponent<Potion>().AddIngredient(item_model);
-            }
+        { 
+            gameObject.GetComponent<Potion>().AddIngredient(item_model);
+            
         }
     }
 

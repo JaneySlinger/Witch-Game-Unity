@@ -7,7 +7,8 @@ public class Inventory : MonoBehaviour
 {
     public event EventHandler<InventoryEventArgs> ItemAdded;
     public event EventHandler<InventoryEventArgs> ItemUsed;
-    //public event EventHandler<InventoryEventArgs> ItemRemoved;  //event to the HUD to remove the ingredient
+    
+    public GameObject cauldron;
     List<IInventoryItem> items = new List<IInventoryItem>();
 
 
@@ -31,12 +32,16 @@ public class Inventory : MonoBehaviour
     public void useItem(IInventoryItem item)
     {
     
-        //broadcast event to the cauldron
+        //broadcast event to keyopener and HUDManager
         if(ItemUsed != null)
-        {
-            Debug.Log("Inventory broadcasting event");
+        {   
+            if(cauldron.GetComponent<KeyOpener>().inRange){
+                Debug.Log("Inventory broadcasting event");
             ItemUsed.Invoke(this, new InventoryEventArgs(item));
-            //ItemRemoved.Invoke(this,new InventoryEventArgs(item));
+            } else {
+                Debug.Log("not in range to use item");
+            }
+            
         }
         items.Remove(item);
 
