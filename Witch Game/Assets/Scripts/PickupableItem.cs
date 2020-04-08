@@ -7,6 +7,8 @@ public class PickupableItem : MonoBehaviour, IInventoryItem
 {
     public Sprite _itemImage;
     public string _itemName;
+    public string _tag;
+    public string _description;
     public GameObject player;
 
 
@@ -23,6 +25,22 @@ public class PickupableItem : MonoBehaviour, IInventoryItem
         get
         {
             return _itemImage;
+        }
+    }
+
+    public string tag
+    {
+        get
+        {
+            return _tag;
+        }
+    }
+
+        public string description
+    {
+        get
+        {
+            return _description;
         }
     }
 

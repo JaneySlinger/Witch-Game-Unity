@@ -9,6 +9,8 @@ public class Inventory : MonoBehaviour
     public event EventHandler<InventoryEventArgs> ItemUsed;
     
     public GameObject cauldron;
+
+    public HUDManager manager;
     List<IInventoryItem> items = new List<IInventoryItem>();
 
 
@@ -35,11 +37,12 @@ public class Inventory : MonoBehaviour
         //broadcast event to keyopener and HUDManager
         if(ItemUsed != null)
         {   
-            if(cauldron.GetComponent<KeyOpener>().inRange){
+            if((item.tag == "ingredient" && cauldron.GetComponent<KeyOpener>().inRange) || item.tag == "book"){
                 Debug.Log("Inventory broadcasting event");
             ItemUsed.Invoke(this, new InventoryEventArgs(item));
             } else {
                 Debug.Log("not in range to use item");
+                manager.SetButtonText("You can't use that here.");
             }
             
         }

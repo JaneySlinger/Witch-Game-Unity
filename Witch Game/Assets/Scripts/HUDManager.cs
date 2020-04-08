@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HUDManager : MonoBehaviour
 {
     public Inventory inventory;
+    public Button notification;
     
     // Start is called before the first frame update
     void Start()
@@ -59,7 +60,20 @@ public class HUDManager : MonoBehaviour
                 break;
             }
         }
+
+        if(e.item.tag == "book"){
+            string spellName = e.item.itemName;
+            string spellDescription = e.item.description;
+            string buttonText = "You leant the spell: " + spellName + "\n. " + spellDescription;
+            SetButtonText(buttonText);
+            
+        } 
  
+    }
+
+    public void SetButtonText(string text){
+        notification.gameObject.SetActive(true);
+        notification.GetComponentInChildren<Text>().text = text;
     }
 
 

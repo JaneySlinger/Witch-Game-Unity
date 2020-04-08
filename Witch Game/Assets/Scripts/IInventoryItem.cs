@@ -8,6 +8,8 @@ public interface IInventoryItem
     //any object that implements this interface will be able to be stored in the inventory
     string itemName {get;}
     Sprite itemImage {get;}
+    string tag {get;}
+    string description {get;}
     void onPickup();
 }
 
