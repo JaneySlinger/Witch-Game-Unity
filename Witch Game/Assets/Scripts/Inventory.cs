@@ -42,7 +42,7 @@ public class Inventory : MonoBehaviour
             ItemUsed.Invoke(this, new InventoryEventArgs(item));
             } else {
                 Debug.Log("not in range to use item");
-                manager.SetButtonText("You can't use that here.");
+                manager.SetPanelText("You can't use that here.");
             }
             
         }
