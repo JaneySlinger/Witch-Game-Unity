@@ -11,7 +11,8 @@ public class Inventory : MonoBehaviour
     public GameObject cauldron;
 
     public HUDManager manager;
-    List<IInventoryItem> items = new List<IInventoryItem>();
+    public PersistenceManager persistenceManager;
+    public List<IInventoryItem> items = new List<IInventoryItem>();
 
 
     public void addItem(IInventoryItem item)
@@ -49,6 +50,12 @@ public class Inventory : MonoBehaviour
         items.Remove(item);
 
 
+    }
+
+    private void Start() {
+        //load in the inventory from the other scene
+        items = persistenceManager.storedItems;
+        
     }
     
 

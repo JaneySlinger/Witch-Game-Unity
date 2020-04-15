@@ -9,6 +9,8 @@ public class PortalManager : MonoBehaviour
     public bool inRange;
     public HUDManager hudManager; 
     public int destinationArea;
+    public PersistenceManager persistenceManager;
+    public Inventory inventory;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,9 @@ public class PortalManager : MonoBehaviour
 
 
     private void LoadArea(int areaIndex){
+        persistenceManager.SetInventory(inventory.items);
         SceneManager.LoadScene(areaIndex);
     }
+
+    
 }

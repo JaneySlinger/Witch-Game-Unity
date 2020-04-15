@@ -17,6 +17,25 @@ public class HUDManager : MonoBehaviour
 
         //register to the item removed event so that the item can be removed from the inventory
         inventory.ItemUsed += InventoryItemUsed;
+
+        //populate the images with the data from the persistenceManager when a new scene is loaded
+        
+        Transform panel = transform.Find("InventoryHUD");
+        foreach(IInventoryItem item in inventory.items){
+            foreach(Transform slot in panel)
+            {
+                Image image = slot.GetComponent<Image>();
+                Slot button = slot.GetComponent<Slot>();
+                if(!image.enabled)
+                {
+                    image.enabled = true;
+                    image.sprite = item.itemImage;
+                    button.item = item;
+
+                    break;
+                }
+            }
+        }
     }
 
     // Update is called once per frame
@@ -86,6 +105,7 @@ public class HUDManager : MonoBehaviour
     public void ClearToolTip(){
         toolTip.gameObject.SetActive(false);
     }
+
 
 
     
