@@ -7,6 +7,7 @@ public class HUDManager : MonoBehaviour
 {
     public Inventory inventory;
     public Transform notification;
+    public Transform toolTip;
     
     // Start is called before the first frame update
     void Start()
@@ -65,15 +66,25 @@ public class HUDManager : MonoBehaviour
             string spellName = e.item.itemName;
             string spellDescription = e.item.description;
             string panelText = "You leant the spell: " + spellName + "\n. " + spellDescription;
-            SetPanelText(panelText);
+            SetNotificationText(panelText);
             
         } 
  
     }
 
-    public void SetPanelText(string text){
+    public void SetNotificationText(string text){
         notification.gameObject.SetActive(true);
         notification.GetComponentInChildren<Text>().text = text;
+        ClearToolTip();
+    }
+
+    public void SetToolTipText(string text){
+        toolTip.gameObject.SetActive(true);
+        toolTip.GetComponentInChildren<Text>().text = text;
+    }
+
+    public void ClearToolTip(){
+        toolTip.gameObject.SetActive(false);
     }
 
 
