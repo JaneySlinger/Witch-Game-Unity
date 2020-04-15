@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/WitchHut.unity
+    guid: 646e71983b8ca544d802c61895538b3c
+  - enabled: 1
+    path: Assets/Scenes/Maze.unity
+    guid: e10d07f79f6ca18488cde4c8276f564d
   m_configObjects: {}

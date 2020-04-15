@@ -6,7 +6,6 @@ public class NPCController : MonoBehaviour
 {
     public HUDManager hudManager;
     public bool inRange;
-    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +15,7 @@ public class NPCController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("e") && inRange == true){
+        if(Input.GetButtonDown("e") && inRange){
             hudManager.SetNotificationText("It's time for your test to become a full-blown witch. I need you to find the 3 ingredients to make a potion.");
         }
     }
