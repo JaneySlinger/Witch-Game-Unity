@@ -6,8 +6,7 @@ using System;
 public class SkillLearner : MonoBehaviour
 {
     public Inventory inventory;
-    public GameObject key;
-    private GameObject item;
+    public string key_string;
     public GameObject player;
 
 
@@ -24,11 +23,10 @@ public class SkillLearner : MonoBehaviour
     {
         Debug.Log("SkillLeaner script registered event");
         //check if the correct item is in use
-        item = (e.item as MonoBehaviour).gameObject; 
-        if(item == key)
-        { 
+        //using the key string as it is stored between scenes
+        Debug.Log(e.item.itemName);
+        if(e.item.itemName == key_string){
             player.GetComponent<PlayerInteracter>().enabled = true;
-            
         }
     }
 

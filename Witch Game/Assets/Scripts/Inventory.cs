@@ -40,7 +40,7 @@ public class Inventory : MonoBehaviour
         {   
             if((item.tag == "ingredient" && cauldron.GetComponent<KeyOpener>().inRange) || item.tag == "book"){
                 Debug.Log("Inventory broadcasting event");
-            ItemUsed.Invoke(this, new InventoryEventArgs(item));
+                ItemUsed.Invoke(this, new InventoryEventArgs(item));
             } else {
                 Debug.Log("not in range to use item");
                 manager.SetNotificationText("You can't use that here.");
@@ -52,10 +52,12 @@ public class Inventory : MonoBehaviour
 
     }
 
+
+
     private void Start() {
         //load in the inventory from the other scene
         items = persistenceManager.storedItems;
-        
+
     }
     
 
