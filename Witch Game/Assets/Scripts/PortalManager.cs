@@ -32,6 +32,14 @@ public class PortalManager : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit(Collider other) {
+        if(other.tag == "Player"){
+            inRange = false;
+            hudManager.SetToolTipText("Press enter to travel");
+            hudManager.ClearToolTip();
+        }
+    }
+
 
 
     private void LoadArea(int areaIndex){
