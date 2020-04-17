@@ -1411,56 +1411,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
---- !u!1 &927437931 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6918626803715633988, guid: 27a0cbf4d8bb4754c9a58d93ec238921,
-    type: 3}
-  m_PrefabInstance: {fileID: 1203499375}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &927437932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927437931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd309d20f73f3834fb6127576fcab571, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _itemImage: {fileID: 21300000, guid: 7fb66e2691f36034a9170c2324d66b03, type: 3}
-  _itemName: Levitate
-  _tag: book
-  _description: Maybe you could use it to pick things up...
-  player: {fileID: 173266203}
---- !u!135 &927437933
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927437931}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!64 &927437934
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927437931}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!114 &1130882593 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6795498011733937969, guid: 8e5595edfd56679468ab4ccd239236ee,
@@ -1542,75 +1492,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
---- !u!1001 &1203499375
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4193843731861240669, guid: 27a0cbf4d8bb4754c9a58d93ec238921,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 33.12468
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193843731861240669, guid: 27a0cbf4d8bb4754c9a58d93ec238921,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.7950077
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193843731861240669, guid: 27a0cbf4d8bb4754c9a58d93ec238921,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 47.836178
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193843731861240669, guid: 27a0cbf4d8bb4754c9a58d93ec238921,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193843731861240669, guid: 27a0cbf4d8bb4754c9a58d93ec238921,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193843731861240669, guid: 27a0cbf4d8bb4754c9a58d93ec238921,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193843731861240669, guid: 27a0cbf4d8bb4754c9a58d93ec238921,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193843731861240669, guid: 27a0cbf4d8bb4754c9a58d93ec238921,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193843731861240669, guid: 27a0cbf4d8bb4754c9a58d93ec238921,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193843731861240669, guid: 27a0cbf4d8bb4754c9a58d93ec238921,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4193843731861240669, guid: 27a0cbf4d8bb4754c9a58d93ec238921,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6918626803715633988, guid: 27a0cbf4d8bb4754c9a58d93ec238921,
-        type: 3}
-      propertyPath: m_Name
-      value: Spellbook_Levitate
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 27a0cbf4d8bb4754c9a58d93ec238921, type: 3}
 --- !u!1 &1280258896 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7152391440238518368, guid: 0305ab202acfa4143a9202a42c63c695,
@@ -2132,12 +2013,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1130882593}
     - target: {fileID: 876558896, guid: be3113f9ac8570c44974ac28ea89a469, type: 3}
-      propertyPath: key
-      value: 
-      objectReference: {fileID: 927437931}
-    - target: {fileID: 876558896, guid: be3113f9ac8570c44974ac28ea89a469, type: 3}
-      propertyPath: key_string
+      propertyPath: levitate_string
       value: Levitate
+      objectReference: {fileID: 0}
+    - target: {fileID: 876558896, guid: be3113f9ac8570c44974ac28ea89a469, type: 3}
+      propertyPath: fire_string
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486796305, guid: be3113f9ac8570c44974ac28ea89a469, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 59368932849564923, guid: be3113f9ac8570c44974ac28ea89a469,
         type: 3}
@@ -2280,6 +2165,80 @@ PrefabInstance:
       objectReference: {fileID: 1130882593}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6867849b031314cb46b5c48b13d9c7, type: 3}
+--- !u!1001 &3408535158036999427
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1548686377067226929, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 33.12468
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548686377067226929, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7950077
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548686377067226929, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 47.836178
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548686377067226929, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548686377067226929, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548686377067226929, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548686377067226929, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548686377067226929, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548686377067226929, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548686377067226929, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548686377067226929, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408535158863575407, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 173266203}
+    - target: {fileID: 5714622356160589608, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: m_Name
+      value: Spellbook_Levitate
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36f88713de605cc4986e5474e46d9462, type: 3}
 --- !u!1001 &4968253359147027460
 PrefabInstance:
   m_ObjectHideFlags: 0

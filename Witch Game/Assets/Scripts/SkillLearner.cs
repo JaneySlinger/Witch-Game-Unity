@@ -6,7 +6,8 @@ using System;
 public class SkillLearner : MonoBehaviour
 {
     public Inventory inventory;
-    public string key_string;
+    public string levitate_string;
+    public string fire_string;
     public GameObject player;
 
 
@@ -25,8 +26,10 @@ public class SkillLearner : MonoBehaviour
         //check if the correct item is in use
         //using the key string as it is stored between scenes
         Debug.Log(e.item.itemName);
-        if(e.item.itemName == key_string){
+        if(e.item.itemName == levitate_string){
             player.GetComponent<PlayerInteracter>().enabled = true;
+        } else if(e.item.itemName == fire_string){
+            player.GetComponent<FireSpell>().enabled = true;
         }
     }
 
