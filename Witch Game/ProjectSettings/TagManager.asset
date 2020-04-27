@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ingredient
   - bullet
+  - Fire
+  - Light
   layers:
   - Default
   - TransparentFX

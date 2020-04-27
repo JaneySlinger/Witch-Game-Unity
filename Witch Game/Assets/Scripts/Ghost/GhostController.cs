@@ -72,7 +72,6 @@ public class GhostController : MonoBehaviour
         }
     }
 
-    
 
     void OnDrawGizmos(){
         Gizmos.color = Color.blue;
