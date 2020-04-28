@@ -22,6 +22,7 @@ public class HitOnContact : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
+        Debug.Log("Colliding with " + other.gameObject);
         if(other.gameObject == target){
             //move the player back to the start of the area - needs implementing
             Debug.Log("Colliding with player");
