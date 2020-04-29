@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -885,6 +885,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: beb8ceccb376f684095ae1a93f088717, type: 3}
+--- !u!1 &341302233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133,
+    type: 3}
+  m_PrefabInstance: {fileID: 563549877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &361192452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1685,6 +1691,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff62b58c5a9ea164fa8ddf8038e10cd1, type: 3}
+--- !u!1 &1617121028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1617121030}
+  - component: {fileID: 1617121029}
+  m_Layer: 0
+  m_Name: StartUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1617121029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617121028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f914fc8006ac9bf419673da010e3b512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  persistenceManager: {fileID: 11400000, guid: 52a69871123fc0a40bd44e6d6cb637ab, type: 2}
+  rock1: {fileID: 341302233}
+  levitateItems: []
+--- !u!4 &1617121030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617121028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 71.14315, y: -32.683548, z: 79.621216}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1762432842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2020,6 +2072,11 @@ PrefabInstance:
       propertyPath: fire_string
       value: Fire
       objectReference: {fileID: 0}
+    - target: {fileID: 876558896, guid: be3113f9ac8570c44974ac28ea89a469, type: 3}
+      propertyPath: persistenceManager
+      value: 
+      objectReference: {fileID: 11400000, guid: 52a69871123fc0a40bd44e6d6cb637ab,
+        type: 2}
     - target: {fileID: 1486796305, guid: be3113f9ac8570c44974ac28ea89a469, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2163,6 +2220,11 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1130882593}
+    - target: {fileID: 1813480244725538686, guid: de6867849b031314cb46b5c48b13d9c7,
+        type: 3}
+      propertyPath: destinationArea
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6867849b031314cb46b5c48b13d9c7, type: 3}
 --- !u!1001 &3408535158036999427

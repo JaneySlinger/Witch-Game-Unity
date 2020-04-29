@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: fde1245bfb9e7b64d9143845fadf2439
+  - enabled: 1
     path: Assets/Scenes/WitchHut.unity
     guid: 646e71983b8ca544d802c61895538b3c
   - enabled: 1
