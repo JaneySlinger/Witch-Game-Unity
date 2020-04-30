@@ -10,6 +10,7 @@ public class ClearPersistence : MonoBehaviour
     {
         persistenceManager.SetLevitateSpell(false);
         persistenceManager.SetFireSpell(false);
+        persistenceManager.ResetObjectPositions();
     }
 
     // Update is called once per frame

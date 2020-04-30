@@ -13,6 +13,65 @@ MonoBehaviour:
   m_Name: PersistenceManagerData
   m_EditorClassIdentifier: 
   fireSpellKnown: 0
-  levitateSpellKnown: 1
+  levitateSpellKnown: 0
   ingredients_submitted: 0
-  levitateItems: []
+  positions:
+  - {x: 22, y: 1, z: 41.5}
+  - {x: 24, y: 1, z: 41}
+  - {x: 20, y: 0.4, z: 29}
+  - {x: 24, y: 1, z: 37}
+  scales:
+  - {x: 2, y: 2, z: 2}
+  - {x: 5, y: 5, z: 5}
+  - {x: 4, y: 2, z: 4}
+  - {x: 1, y: 1, z: 1}
+  xAngles:
+  - 0
+  - 0
+  - 0
+  - 0
+  yAngles:
+  - 0
+  - 0
+  - 0
+  - 0
+  zAngles:
+  - 0
+  - 0
+  - 0
+  - 0
+  prefabs:
+  - {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+  - {fileID: 5202732821079448320, guid: cebfacc247a640945a2c30b442202fca, type: 3}
+  - {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+  - {fileID: 1493958779012120596, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}
+  startPositions:
+  - {x: 22, y: 1, z: 41.5}
+  - {x: 24, y: 1, z: 41}
+  - {x: 20, y: 0.4, z: 49}
+  - {x: 24, y: 1, z: 37}
+  startScales:
+  - {x: 2, y: 2, z: 2}
+  - {x: 5, y: 5, z: 5}
+  - {x: 4, y: 2, z: 4}
+  - {x: 1, y: 1, z: 1}
+  startXAngles:
+  - 0
+  - 0
+  - 0
+  - 0
+  startYAngles:
+  - 0
+  - 0
+  - 0
+  - 0
+  startZAngles:
+  - 0
+  - 0
+  - 0
+  - 0
+  startPrefabs:
+  - {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+  - {fileID: 5202732821079448320, guid: cebfacc247a640945a2c30b442202fca, type: 3}
+  - {fileID: 8783306491908617939, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
+  - {fileID: 1493958779012120596, guid: b9de24523a11d714db3851b5f0f9d527, type: 3}

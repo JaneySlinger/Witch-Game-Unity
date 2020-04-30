@@ -11,6 +11,7 @@ public class PortalManager : MonoBehaviour
     public int destinationArea;
     public PersistenceManager persistenceManager;
     public Inventory inventory;
+    private GameObject[] rocks;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,9 +41,14 @@ public class PortalManager : MonoBehaviour
         }
     }
 
-
-
     private void LoadArea(int areaIndex){
+        if(areaIndex == 2){
+            rocks = GameObject.FindGameObjectsWithTag("holdable");
+            if(rocks.Length != 0){ 
+                persistenceManager.SetObjectPositions(rocks);
+            }
+        }
+        
         persistenceManager.SetInventory(inventory.items);
         SceneManager.LoadScene(areaIndex);
     }
