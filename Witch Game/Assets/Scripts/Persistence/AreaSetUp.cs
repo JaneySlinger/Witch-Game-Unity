@@ -6,13 +6,21 @@ public class AreaSetUp : MonoBehaviour
 {
     public PersistenceManager persistenceManager;
     private GameObject rock;
+    public GameObject spellbook;
+    public GameObject ingredientOne;
+    public GameObject ingredientTwo;
+    public Potion potion;
+
     
 
     // Start is called before the first frame update
     void Start()
     {
         SetUpPickupObjects();
-        SetUpInventoryObjects();    
+        SetUpInventoryObjects();  
+        ActivateSpellbook();
+        potion.SetColour();
+        ActivateIngredients();
     }
 
     void SetUpPickupObjects(){
@@ -33,4 +41,22 @@ public class AreaSetUp : MonoBehaviour
         rock.transform.Rotate(xAngle, yAngle, zAngle, Space.Self);
         
     }
+
+    void ActivateSpellbook(){
+        if(!persistenceManager.levitateSpellKnown){
+            spellbook.SetActive(true);
+        }
+    }
+
+    void ActivateIngredients(){
+        if(!persistenceManager.ingredientOneCollected){
+            ingredientOne.SetActive(true);
+        }
+        if(!persistenceManager.ingredientTwoCollected){
+            ingredientTwo.SetActive(true);
+        }
+
+    }
+
+    
 }

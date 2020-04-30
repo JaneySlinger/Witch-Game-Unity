@@ -15,31 +15,34 @@ MonoBehaviour:
   fireSpellKnown: 0
   levitateSpellKnown: 0
   ingredients_submitted: 0
+  ingredientOneCollected: 0
+  ingredientTwoCollected: 0
+  ingredientThreeCollected: 0
   positions:
-  - {x: 22, y: 1, z: 41.5}
-  - {x: 24, y: 1, z: 41}
-  - {x: 20, y: 0.4, z: 29}
-  - {x: 24, y: 1, z: 37}
+  - {x: 22.159382, y: 1.2066054, z: 41.829163}
+  - {x: 24.031673, y: 1.0527546, z: 40.98352}
+  - {x: 19.997944, y: 0.36062312, z: 49.001217}
+  - {x: 23.997793, y: 0.8391955, z: 36.999283}
   scales:
   - {x: 2, y: 2, z: 2}
   - {x: 5, y: 5, z: 5}
   - {x: 4, y: 2, z: 4}
   - {x: 1, y: 1, z: 1}
   xAngles:
-  - 0
-  - 0
-  - 0
-  - 0
+  - 18.291912
+  - 353.78885
+  - 1.9087064
+  - 357.55652
   yAngles:
-  - 0
-  - 0
-  - 0
-  - 0
+  - 10.21506
+  - 359.4345
+  - 0.04097877
+  - 0.33552152
   zAngles:
-  - 0
-  - 0
-  - 0
-  - 0
+  - 335.46997
+  - 350.504
+  - 1.3233619
+  - 1.7486807
   prefabs:
   - {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
   - {fileID: 5202732821079448320, guid: cebfacc247a640945a2c30b442202fca, type: 3}

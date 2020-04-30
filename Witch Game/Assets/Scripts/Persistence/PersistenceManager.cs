@@ -7,7 +7,11 @@ public class PersistenceManager : ScriptableObject
 {
     public bool fireSpellKnown;
     public bool levitateSpellKnown; 
-    public int ingredients_submitted; //not done yet
+    public int ingredients_submitted; 
+    public bool ingredientOneCollected;
+    public bool ingredientTwoCollected;
+    public bool ingredientThreeCollected;
+
     public List<IInventoryItem> storedItems = new List<IInventoryItem>();
 
     public List<Vector3> positions = new List<Vector3>();
@@ -55,5 +59,12 @@ public class PersistenceManager : ScriptableObject
         yAngles = new List<float>(startYAngles);
         zAngles = new List<float>(startZAngles);
         prefabs = new List<GameObject>(startPrefabs);
+    }
+
+    public void ResetIngredientCollection(){
+        ingredientOneCollected = false;
+        ingredientTwoCollected = false;
+        ingredientThreeCollected = false;
+        ingredients_submitted = 0;
     }
 }

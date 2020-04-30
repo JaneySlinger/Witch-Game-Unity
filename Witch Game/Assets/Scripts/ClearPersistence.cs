@@ -11,6 +11,7 @@ public class ClearPersistence : MonoBehaviour
         persistenceManager.SetLevitateSpell(false);
         persistenceManager.SetFireSpell(false);
         persistenceManager.ResetObjectPositions();
+        persistenceManager.ResetIngredientCollection();
     }
 
     // Update is called once per frame

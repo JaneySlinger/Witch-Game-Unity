@@ -7,9 +7,13 @@ public class KeyOpener : MonoBehaviour
 {
     public Inventory inventory;
     public bool inRange = false;
-    public GameObject key;
+    public GameObject ingredientOne;
+    public GameObject ingredientTwo;
+    public GameObject ingredientThree;
+
     private GameObject item;
     public GameObject item_model;
+
 
     
 
@@ -25,10 +29,10 @@ public class KeyOpener : MonoBehaviour
         Debug.Log("KeyOpener script registered event");
         //check if the correct item is in use
         item = (e.item as MonoBehaviour).gameObject; 
-        if(item == key)
+        if(item == ingredientOne || item == ingredientTwo || item == ingredientThree)
         { 
             gameObject.GetComponent<Potion>().AddIngredient(item_model);
-            
+   
         }
     }
 

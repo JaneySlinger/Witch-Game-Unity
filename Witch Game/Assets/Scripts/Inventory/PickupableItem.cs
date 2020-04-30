@@ -10,6 +10,8 @@ public class PickupableItem : MonoBehaviour, IInventoryItem
     public string _tag;
     public string _description;
     public GameObject player;
+    public int ingredientNumber;
+    public PersistenceManager persistenceManager;
 
 
     public string itemName
@@ -46,7 +48,15 @@ public class PickupableItem : MonoBehaviour, IInventoryItem
 
     public void onPickup()
     {
+        if(ingredientNumber == 1){
+            persistenceManager.ingredientOneCollected = true;
+        } else if(ingredientNumber == 2){
+            persistenceManager.ingredientTwoCollected = true;
+        } else if(ingredientNumber == 3){
+            persistenceManager.ingredientThreeCollected = true;
+        }
         gameObject.SetActive(false); // "picking up merely makes it invisible"        
+
     }
 
 }

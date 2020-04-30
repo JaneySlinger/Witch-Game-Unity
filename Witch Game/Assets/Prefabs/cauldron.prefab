@@ -124,7 +124,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionColour: {fileID: 4968253358671844123}
   bluePotion: {fileID: 2100000, guid: 91e2229f96123ff4b98d7404118a93fc, type: 2}
+  greenPotion: {fileID: 2100000, guid: dd931824fabab0a4599b6c7ceb57a3cc, type: 2}
+  redPotion: {fileID: 2100000, guid: 66d3c3fd6d354164a8b6a0d575ea529b, type: 2}
+  purplePotion: {fileID: 2100000, guid: e3a1ce1fa166f7a46bdfd563e12adb61, type: 2}
   ingredientTransform: {fileID: 4968253359031941933}
+  persistenceManager: {fileID: 11400000, guid: 52a69871123fc0a40bd44e6d6cb637ab, type: 2}
 --- !u!114 &4968253358182867035
 MonoBehaviour:
   m_ObjectHideFlags: 0

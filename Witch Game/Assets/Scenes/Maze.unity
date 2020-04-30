@@ -430,6 +430,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e8edce355e1bd845a6e1e4e7b35609c, type: 3}
+--- !u!1 &155954452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 155954454}
+  - component: {fileID: 155954453}
+  m_Layer: 0
+  m_Name: Setup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &155954453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155954452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b53e424c51bc248a1db9ae7f3efdb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  persistenceManager: {fileID: 11400000, guid: 52a69871123fc0a40bd44e6d6cb637ab, type: 2}
+  spellbook: {fileID: 1611392232}
+  ingredientThree: {fileID: 188557238}
+--- !u!4 &155954454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155954452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.085808, y: 1.9199607, z: 47.50179}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &155985532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -499,6 +545,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea7dca7b0178fd54f837d580856fad8f, type: 3}
+--- !u!1 &188557238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7484189727629391395, guid: 6e07f8f11610e414f9ea547b337b19c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 539128886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &197773405 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8038064949737589078, guid: 5e8edce355e1bd845a6e1e4e7b35609c,
@@ -1663,10 +1715,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5280678658560489966, guid: 6e07f8f11610e414f9ea547b337b19c2,
+        type: 3}
+      propertyPath: _tag
+      value: ingredient
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280678658560489966, guid: 6e07f8f11610e414f9ea547b337b19c2,
+        type: 3}
+      propertyPath: _description
+      value: An ingredient for the potion.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280678658560489966, guid: 6e07f8f11610e414f9ea547b337b19c2,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 677845544}
+    - target: {fileID: 5280678658560489966, guid: 6e07f8f11610e414f9ea547b337b19c2,
+        type: 3}
+      propertyPath: ingredientNumber
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7484189727629391395, guid: 6e07f8f11610e414f9ea547b337b19c2,
         type: 3}
       propertyPath: m_Name
-      value: Grass_02
+      value: ingredient_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484189727629391395, guid: 6e07f8f11610e414f9ea547b337b19c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7484189727629617667, guid: 6e07f8f11610e414f9ea547b337b19c2,
         type: 3}
@@ -2094,6 +2171,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be3113f9ac8570c44974ac28ea89a469, type: 3}
+--- !u!1 &677845544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 59368932849564921, guid: be3113f9ac8570c44974ac28ea89a469,
+    type: 3}
+  m_PrefabInstance: {fileID: 677845543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &677845545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 59368932849918169, guid: be3113f9ac8570c44974ac28ea89a469,
@@ -19242,8 +19325,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spellbook_Fire
       objectReference: {fileID: 0}
+    - target: {fileID: 5714622356160589608, guid: 36f88713de605cc4986e5474e46d9462,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36f88713de605cc4986e5474e46d9462, type: 3}
+--- !u!1 &1611392232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5714622356160589608, guid: 36f88713de605cc4986e5474e46d9462,
+    type: 3}
+  m_PrefabInstance: {fileID: 1611392231}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1639328272 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8038064949737589078, guid: 5e8edce355e1bd845a6e1e4e7b35609c,
