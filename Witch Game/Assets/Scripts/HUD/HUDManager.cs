@@ -18,6 +18,9 @@ public class HUDManager : MonoBehaviour
         //register to the item removed event so that the item can be removed from the inventory
         inventory.ItemUsed += InventoryItemUsed;
 
+        //register to the ingredient event
+        inventory.IngredientUsed += IngredientItemUsed;
+
         //populate the images with the data from the persistenceManager when a new scene is loaded
         
         Transform panel = transform.Find("InventoryHUD");
@@ -36,12 +39,6 @@ public class HUDManager : MonoBehaviour
                 }
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     //event handler for an item being added
@@ -65,14 +62,27 @@ public class HUDManager : MonoBehaviour
 
     private void InventoryItemUsed(object sender, InventoryEventArgs e)
     {
+        RemoveFromHUD(e.item.itemImage);
+        string spellName = e.item.itemName;
+        string spellDescription = e.item.description;
+        string panelText = "You leant the spell: " + spellName + ".\n " + spellDescription;
+        SetNotificationText(panelText);
+    }
+
+    private void IngredientItemUsed(object sender, IngredientEventArgs e){
+        RemoveFromHUD(e.itemImage);
+        SetNotificationText("You submitted an ingredient.");
+    }
+
+    private void RemoveFromHUD(Sprite item_sprite){
         Transform panel = transform.Find("InventoryHUD");
-        Debug.Log("HUDManager: Removing the picture from the slot.");
+        Debug.Log("HUDManager: Removing the ingredient used from the slot.");
 
         //find the slot with the removed item and disable the image
         foreach(Transform slot in panel){
             Image image = slot.GetComponent<Image>();
             Slot button = slot.GetComponent<Slot>();
-            if(image.sprite == e.item.itemImage){
+            if(image.sprite == item_sprite){
                 //clear the slot in the panel
                 image.enabled = false;
                 image.sprite = null;
@@ -80,15 +90,6 @@ public class HUDManager : MonoBehaviour
                 break;
             }
         }
-
-        if(e.item.tag == "book"){
-            string spellName = e.item.itemName;
-            string spellDescription = e.item.description;
-            string panelText = "You leant the spell: " + spellName + "\n. " + spellDescription;
-            SetNotificationText(panelText);
-            
-        } 
- 
     }
 
     public void SetNotificationText(string text){

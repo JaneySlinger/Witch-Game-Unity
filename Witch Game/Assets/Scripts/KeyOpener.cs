@@ -7,32 +7,21 @@ public class KeyOpener : MonoBehaviour
 {
     public Inventory inventory;
     public bool inRange = false;
-    public GameObject ingredientOne;
-    public GameObject ingredientTwo;
-    public GameObject ingredientThree;
 
-    private GameObject item;
     public GameObject item_model;
-
-
-    
 
     // Start is called before the first frame update
     void Start()
     {
         //register with the event handler
-        inventory.ItemUsed += Inventory_ItemUsed;
+        inventory.IngredientUsed += Ingredient_ItemUsed;
     }
 
-    void Inventory_ItemUsed(object sender, InventoryEventArgs e)
-    {
-        Debug.Log("KeyOpener script registered event");
-        //check if the correct item is in use
-        item = (e.item as MonoBehaviour).gameObject; 
-        if(item == ingredientOne || item == ingredientTwo || item == ingredientThree)
-        { 
+
+    void Ingredient_ItemUsed(object sender, IngredientEventArgs e){
+        Debug.Log("the tag in the keyopener is " + e.tag);
+        if(e.tag == "ingredient"){
             gameObject.GetComponent<Potion>().AddIngredient(item_model);
-   
         }
     }
 

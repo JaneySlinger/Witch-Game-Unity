@@ -22,11 +22,11 @@ public class HitOnContact : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("Colliding with " + other.gameObject);
+        //Debug.Log("Colliding with " + other.gameObject);
         if(other.gameObject == target){
             //move the player back to the start of the area - needs implementing
-            Debug.Log("Colliding with player");
-            Debug.Log("Destroy the player");
+            //Debug.Log("Colliding with player");
+            //Debug.Log("Destroy the player");
             player.GetComponent<CharacterController>().enabled = false;
             player.transform.position = new Vector3(x,y,z);
             player.transform.rotation = new Quaternion(rotX, rotY, rotZ, 0.0f);

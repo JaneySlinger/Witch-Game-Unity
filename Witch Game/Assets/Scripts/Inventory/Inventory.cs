@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 {
     public event EventHandler<InventoryEventArgs> ItemAdded;
     public event EventHandler<InventoryEventArgs> ItemUsed;
+    public event EventHandler<IngredientEventArgs> IngredientUsed;
     
     public GameObject cauldron;
 
@@ -37,19 +38,23 @@ public class Inventory : MonoBehaviour
     
         //broadcast event to keyopener and HUDManager
         if(ItemUsed != null)
-        {   
-            if((item.tag == "ingredient" && cauldron.GetComponent<KeyOpener>().inRange) || item.tag == "book"){
+        {
+            Debug.Log("the item is " + item.itemName);   
+            if((item.tag == "ingredient" && cauldron.GetComponent<KeyOpener>().inRange)){
+                IngredientUsed.Invoke(this, new IngredientEventArgs(item.tag, item.itemImage));
+                items.Remove(item);
+            } else if(item.tag == "book"){ 
                 Debug.Log("Inventory broadcasting event");
                 ItemUsed.Invoke(this, new InventoryEventArgs(item));
-            } else {
+                items.Remove(item);
+            }
+            else {
                 Debug.Log("not in range to use item");
                 manager.SetNotificationText("You can't use that here.");
             }
             
         }
-        items.Remove(item);
-
-
+        
     }
 
 

@@ -48,6 +48,10 @@ public class PortalManager : MonoBehaviour
                 persistenceManager.SetObjectPositions(rocks);
             }
         }
+        for (int i = 0; i < inventory.items.Count; i++)
+        {
+            Debug.Log(inventory.items[i].itemName);
+        }
         
         persistenceManager.SetInventory(inventory.items);
         SceneManager.LoadScene(areaIndex);

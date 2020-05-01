@@ -22,3 +22,14 @@ public class InventoryEventArgs: EventArgs
 
     public IInventoryItem item;
 }
+
+public class IngredientEventArgs: EventArgs{
+    public IngredientEventArgs(String tag, Sprite itemImage){
+        this.tag = tag;
+        this.itemImage = itemImage;
+
+    }
+
+    public String tag;
+    public Sprite itemImage;
+}

@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 3408535158863575405}
   - component: {fileID: 3408535158863575407}
   m_Layer: 0
-  m_Name: Spellbook_Levitate
+  m_Name: Spellbook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,6 +272,8 @@ MonoBehaviour:
   _tag: book
   _description: Maybe you could use it to pick things up...
   player: {fileID: 0}
+  ingredientNumber: 0
+  persistenceManager: {fileID: 0}
 --- !u!1 &6462585482018092302
 GameObject:
   m_ObjectHideFlags: 0

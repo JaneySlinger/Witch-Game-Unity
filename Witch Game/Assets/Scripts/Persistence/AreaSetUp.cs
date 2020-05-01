@@ -10,6 +10,7 @@ public class AreaSetUp : MonoBehaviour
     public GameObject ingredientOne;
     public GameObject ingredientTwo;
     public Potion potion;
+    public Inventory inventory;
 
     
 
@@ -17,7 +18,7 @@ public class AreaSetUp : MonoBehaviour
     void Start()
     {
         SetUpPickupObjects();
-        SetUpInventoryObjects();  
+        //SetUpInventoryObjects();  
         ActivateSpellbook();
         potion.SetColour();
         ActivateIngredients();
@@ -32,7 +33,8 @@ public class AreaSetUp : MonoBehaviour
     }
 
     void SetUpInventoryObjects(){
-        //whether the potion ingredients and spell books should be visible
+        //what should be in the inventory
+        inventory.items = new List<IInventoryItem>(persistenceManager.storedItems);
     }
 
     void SpawnRock(GameObject prefab, Vector3 position, Vector3 scale, float xAngle, float yAngle, float zAngle){

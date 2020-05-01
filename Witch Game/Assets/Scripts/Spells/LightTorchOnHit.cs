@@ -20,9 +20,9 @@ public class LightTorchOnHit : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("something collided");
+        //Debug.Log("something collided");
         if(other.tag == "bullet"){
-            Debug.Log("bullet collided");
+            //Debug.Log("bullet collided");
             StartCoroutine(LightOnCR());
         }
     }
