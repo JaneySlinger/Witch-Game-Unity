@@ -8,6 +8,10 @@ public class HUDManager : MonoBehaviour
     public Inventory inventory;
     public Transform notification;
     public Transform toolTip;
+    public Text fireText;
+    public Text levitateText;
+    public Text throwText;
+    public PersistenceManager persistenceManager;
     
     // Start is called before the first frame update
     void Start()
@@ -39,6 +43,15 @@ public class HUDManager : MonoBehaviour
                 }
             }
         }
+
+        //setup whether the tool tips should be active or not
+        if(persistenceManager.fireSpellKnown){
+            fireText.gameObject.SetActive(true);
+        }
+        if(persistenceManager.levitateSpellKnown){
+            levitateText.gameObject.SetActive(true);
+            throwText.gameObject.SetActive(true);
+        }
     }
 
     //event handler for an item being added
@@ -67,6 +80,12 @@ public class HUDManager : MonoBehaviour
         string spellDescription = e.item.description;
         string panelText = "You leant the spell: " + spellName + ".\n " + spellDescription;
         SetNotificationText(panelText);
+        if(spellName == "Levitate"){
+            levitateText.gameObject.SetActive(true);
+            throwText.gameObject.SetActive(true);
+        } else if(spellName == "Fire"){
+            fireText.gameObject.SetActive(true);
+        }
     }
 
     private void IngredientItemUsed(object sender, IngredientEventArgs e){
