@@ -7,6 +7,8 @@ public class PersistenceManager : ScriptableObject
 {
     public bool fireSpellKnown;
     public bool levitateSpellKnown; 
+    public bool fireSpellCollected;
+    public bool levitateSpellCollected;
     public int ingredients_submitted; 
     public bool ingredientOneCollected;
     public bool ingredientTwoCollected;
@@ -34,6 +36,14 @@ public class PersistenceManager : ScriptableObject
 
     public void SetLevitateSpell(bool value){
         levitateSpellKnown = value;
+    }
+
+    public void SetLevitateCollected(bool value){
+        levitateSpellCollected = value;
+    }
+
+    public void SetFireCollected(bool value){
+        fireSpellCollected = value;
     }
 
     public void SetInventory(List<IInventoryItem> items){

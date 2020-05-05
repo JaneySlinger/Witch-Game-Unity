@@ -71,6 +71,14 @@ public class HUDManager : MonoBehaviour
                 break;
             }
         }
+
+        if(e.item.itemName == "Fire"){
+            persistenceManager.SetFireCollected(true);
+        }
+
+        if(e.item.itemName == "Levitate"){
+            persistenceManager.SetLevitateCollected(true);
+        }
     }
 
     private void InventoryItemUsed(object sender, InventoryEventArgs e)

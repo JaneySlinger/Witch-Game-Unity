@@ -21,7 +21,7 @@ public class MazeSetup : MonoBehaviour
     }
 
     void ActivateSpellbook(){
-        if(!persistenceManager.fireSpellKnown){
+        if(!persistenceManager.fireSpellCollected){
             spellbook.SetActive(true);
         }
     }

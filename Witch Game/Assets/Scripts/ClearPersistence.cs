@@ -10,6 +10,8 @@ public class ClearPersistence : MonoBehaviour
     {
         persistenceManager.SetLevitateSpell(false);
         persistenceManager.SetFireSpell(false);
+        persistenceManager.SetFireCollected(false);
+        persistenceManager.SetLevitateCollected(false);
         persistenceManager.ResetObjectPositions();
         persistenceManager.ResetIngredientCollection();
     }

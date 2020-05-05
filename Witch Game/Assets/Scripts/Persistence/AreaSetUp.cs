@@ -45,7 +45,7 @@ public class AreaSetUp : MonoBehaviour
     }
 
     void ActivateSpellbook(){
-        if(!persistenceManager.levitateSpellKnown){
+        if(!persistenceManager.levitateSpellCollected){
             spellbook.SetActive(true);
         }
     }
